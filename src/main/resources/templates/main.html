@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+  <head>
+    <th:block th:insert="~{fragments/header}"></th:block>
+    <title>Home - Books Cart</title>
+    <link rel="stylesheet" href="/css/main.css" />
+  </head>
+  <body>
+    <th:block th:insert="~{fragments/navbar}"></th:block>
+    <th:block th:insert="~{fragments/message}"></th:block>
+
+    <div class="background-video">
+      <video autoplay muted loop src="/media/book.mp4"></video>
+    </div>
+
+    <th:block th:insert="~{fragments/footer}"></th:block>
+  </body>
+</html>

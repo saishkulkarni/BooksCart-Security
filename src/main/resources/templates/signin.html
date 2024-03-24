@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+  <head>
+    <th:block th:insert="~{fragments/header}"></th:block>
+    <title>Login - Books Cart</title>
+    <link rel="stylesheet" href="/css/login.css" />
+  </head>
+  <body>
+    <th:block th:insert="~{fragments/navbar}"></th:block>
+
+    <th:block th:insert="~{fragments/message}"></th:block>
+
+    <div class="container">
+      <form action="/login" method="post" th:object="${loginHelper}">
+        <div class="form-group">
+          <label for="username">Username:</label>
+          <input
+            type="text"
+            class="form-control"
+            id="username"
+            th:field="*{username}"
+            name="username"
+          />
+          <div class="field-error" th:errors="*{username}">small</div>
+        </div>
+        <div class="form-group">
+          <label for="password">Password:</label>
+          <input
+            type="password"
+            class="form-control"
+            th:field="*{password}"
+            id="password"
+            name="password"
+          />
+          <div class="field-error" th:errors="*{password}">small</div>
+        </div>
+        <button type="submit" class="btn btn-secondary btn-block">Login</button>
+      </form>
+    </div>
+
+    <th:block th:insert="~{fragments/footer}"></th:block>
+  </body>
+</html>

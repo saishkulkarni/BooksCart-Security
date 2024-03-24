@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="UTF-8" />
+<title>Email Verification</title>
+<style>
+body {
+	font-family: Arial, sans-serif;
+	margin: 0;
+	padding: 0;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	height: 100vh;
+	background-color: #f4f4f4;
+}
+
+.container {
+	text-align: center;
+	background-color: #fff;
+	padding: 20px;
+	border-radius: 8px;
+	box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.otp-section {
+	margin-top: 20px;
+}
+
+p {
+	margin: 8px 0;
+}
+</style>
+</head>
+<body>
+	<div class="container">
+		<h2>Email Verification</h2>
+
+		<p th:if="${gender == 'male'}">
+			Hello Mr. <span th:text="${name}"></span>,
+		</p>
+		<p th:if="${gender == 'female'}">
+			Hello Mrs. <span th:text="${name}"></span>,
+		</p>
+
+		<p>
+			Your OTP for account creation is: <strong th:text="${otp}"></strong>
+		</p>
+
+		<div class="otp-section">
+			<hr>
+			<p>Please enter the OTP in the application to complete the
+				verification process.</p>
+		</div>
+	</div>
+</body>
+</html>

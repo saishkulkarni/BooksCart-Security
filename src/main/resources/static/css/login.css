@@ -1,0 +1,38 @@
+.container {
+    max-width: 400px;
+    margin: 10px auto;
+    padding: 20px;
+    background-color: #ffffff;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    height: 250px;
+    margin-top: 150px;
+}
+
+.form-group {
+    margin: auto;
+    padding: 0px 5px;
+    margin-bottom: 1px;
+}
+
+
+label {
+    margin: 0;
+}
+
+.form-control {
+    margin-bottom: 12px;
+}
+
+button {
+    margin-top: 20px;
+}
+
+.field-error {
+    font-size: 0.8rem;
+    color: red;
+    float: right;
+    font-weight: 600;
+    margin-top: 0;
+
+}

@@ -1,0 +1,25 @@
+<footer class="py-3 text-center scrolled">&copy; 2024 Books Cart</footer>
+<script>
+   function hideAlert(alertId) {
+        setTimeout(function() {
+            var alertElement = document.getElementById(alertId);
+            if (alertElement) {
+                alertElement.style.display = 'none';
+            }
+        }, 2000);
+    }
+
+    document.addEventListener('DOMContentLoaded', function() {
+        if (document.getElementById('successAlert')) {
+            hideAlert('successAlert');
+        }
+
+        if (document.getElementById('failAlert')) {
+            hideAlert('failAlert');
+        }
+    });
+</script>
+<script src="/js/footer.js"></script>
+<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>

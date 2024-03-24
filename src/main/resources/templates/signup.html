@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+  <head>
+    <th:block th:insert="~{fragments/header}"></th:block>
+    <title>Sign Up - Books Cart</title>
+    <link rel="stylesheet" href="/css/signup.css" />
+  </head>
+  <body>
+    <th:block th:insert="~{fragments/navbar}"></th:block>
+
+    <div class="container">
+      <form action="/signup" method="post" th:object="${user}">
+        <div class="form-group">
+          <label for="name">Name:</label>
+          <input
+            type="text"
+            th:field="*{name}"
+            class="form-control"
+            id="name"
+            name="name"
+          />
+          <div class="field-error" th:errors="*{name}">small</div>
+        </div>
+
+        <div class="form-group">
+          <label for="email">Email:</label>
+          <input
+            type="email"
+            th:field="*{email}"
+            class="form-control"
+            id="email"
+            name="email"
+          />
+          <div class="field-error" th:errors="*{email}">small</div>
+        </div>
+
+        <div class="form-group">
+          <label for="mobile">Mobile:</label>
+          <input
+            type="tel"
+            th:field="*{mobile}"
+            class="form-control"
+            id="mobile"
+            name="mobile"
+          />
+          <div class="field-error" th:errors="*{mobile}">small</div>
+        </div>
+
+        <div class="form-group">
+          <label for="username">Username:</label>
+          <input
+            type="text"
+            class="form-control"
+            th:field="*{username}"
+            id="username"
+            name="username"
+          />
+          <div class="field-error" th:errors="*{username}">small</div>
+        </div>
+
+        <div class="form-group">
+          <label for="gender">Gender:</label>
+          <select
+            class="form-control"
+            id="gender"
+            th:field="*{gender}"
+            name="gender"
+          >
+            <option value="male">Male</option>
+            <option value="female">Female</option>
+            <option value="other" selected>Other</option>
+          </select>
+          <div class="field-error" th:errors="*{gender}">small</div>
+        </div>
+
+        <div class="form-group">
+          <label for="password">Password:</label>
+          <input
+            type="password"
+            th:field="*{password}"
+            class="form-control"
+            id="password"
+            name="password"
+          />
+        </div>
+        <div class="field-error" th:errors="*{password}">small</div>
+
+        <button type="submit" class="btn btn-secondary btn-block">
+          Sign Up
+        </button>
+      </form>
+    </div>
+
+    <th:block th:insert="~{fragments/footer}"></th:block>
+  </body>
+</html>
